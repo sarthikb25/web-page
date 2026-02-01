@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Basic Page</title>
+  <title>Pink Gradient Page</title>
   <style>
     body {
       margin: 0;
@@ -10,27 +10,81 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(135deg, #ffb6c1, #ffc0cb, #ffd1dc);
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+      background:
+        radial-gradient(circle at top left, #ff9a9e, transparent 60%),
+        radial-gradient(circle at bottom right, #fad0c4, transparent 60%),
+        linear-gradient(135deg, #ff5f9e, #ff8dc7, #ffc3e0);
+      background-attachment: fixed;
     }
 
     .content-box {
-      background: rgba(255, 255, 255, 0.85);
-      padding: 30px 40px;
-      border-radius: 12px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-      max-width: 600px;
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 40px 50px;
+      border-radius: 18px;
+      box-shadow:
+        0 20px 40px rgba(255, 0, 120, 0.25),
+        0 8px 20px rgba(0, 0, 0, 0.15);
+      max-width: 650px;
       width: 90%;
+      text-align: center;
     }
 
     .content-box h1 {
       margin-top: 0;
-      color: #d63384;
+      color: #c2185b;
+      font-weight: 600;
     }
 
     .content-box p {
-      font-size: 1.1rem;
+      font-size: 1.15rem;
+      line-height: 1.6;
       color: #444;
+      margin-bottom: 30px;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 14px 28px;
+      border-radius: 30px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #ff5f9e, #ff85c2);
+      color: white;
+      box-shadow: 0 10px 20px rgba(255, 95, 158, 0.4);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 28px rgba(255, 95, 158, 0.55);
+    }
+
+    .btn-secondary {
+      background: white;
+      color: #c2185b;
+      border: 2px solid #ff85c2;
+      box-shadow: 0 8px 16px rgba(255, 95, 158, 0.25);
+    }
+
+    .btn-secondary:hover {
+      background: #fff0f7;
+      transform: translateY(-2px);
     }
   </style>
 </head>
@@ -38,7 +92,14 @@
   <div class="content-box">
     <h1>Editable Title</h1>
     <p>
-      Hello N!!!
-	  Don't be stressed.... Calm down....
+      Hello Nins! 
+      Hegidira?
     </p>
-  <
+
+    <div class="button-group">
+      <a href="#" class="btn btn-primary">Good Pink?</a>
+      <a href="#" class="btn btn-secondary">Not So Good Pink?</a>
+    </div>
+  </div>
+</body>
+</html>
